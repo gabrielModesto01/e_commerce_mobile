@@ -10,7 +10,7 @@ export default function Produto(props) {
                     {props.nome_do_produto}
                 </Text>
                 <View style={{flexDirection: "row", alignItems: "center", marginBottom: 20 }}>
-                    <Image source={require('../assets/FireIcon.png')} />
+                    <Image source={require('../assets/png/FireIcon.png')} />
                     <Text>
                         {props.calorias} Calorias
                     </Text>
