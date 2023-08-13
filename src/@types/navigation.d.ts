@@ -6,6 +6,7 @@ export declare global {
                 nome_do_produto: string,
                 calorias: number,
                 valor: number,
+                ImagePath: string
             }
         }
     }
