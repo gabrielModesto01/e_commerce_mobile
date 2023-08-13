@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import SearchBar from "../components/SearchBar";
 import ListaDeProdutos from "../components/ListaDeProdutos";
@@ -6,7 +5,6 @@ import ListaDeProdutos from "../components/ListaDeProdutos";
 export default function Home() {
     return(
         <View style={styles.container}>
-            <StatusBar />
             <View style={styles.wrapper}>
                 <SearchBar />
                 <ListaDeProdutos />
