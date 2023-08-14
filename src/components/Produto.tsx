@@ -1,10 +1,14 @@
 import { Chivo_700Bold } from "@expo-google-fonts/chivo";
 import { Inter_700Bold } from "@expo-google-fonts/inter";
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function Produto(props) {
+    const { navigate } = useNavigation();
+
     return(
-        <TouchableOpacity activeOpacity={0.5} style={{flexDirection: 'row', backgroundColor: '#FFFFFF', borderRadius: 15, justifyContent: "space-between", marginTop: 15 ,padding: 15, shadowColor: '#000',shadowOffset: { width: 0, height: 4,}, shadowOpacity: 0.25, shadowRadius: 4}}>
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigate('productDetails')} style={{flexDirection: 'row', backgroundColor: '#FFFFFF', borderRadius: 15, justifyContent: "space-between", marginTop: 15 ,padding: 15, shadowColor: '#000',shadowOffset: { width: 0, height: 4,}, shadowOpacity: 0.25, shadowRadius: 4}}>
             <View style={{justifyContent: "space-between"}}>
                 <Text style={{fontSize: 20, fontWeight:"700", fontFamily:'Inter_700Bold'}}>
                     {props.nome_do_produto}
