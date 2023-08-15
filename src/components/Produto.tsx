@@ -9,6 +9,7 @@ interface Product {
     valor: number;
     ImagePath: string;
     amount: number;
+    price: number
 }
 
 export default function Produto(props: Product ) {
@@ -31,7 +32,7 @@ export default function Produto(props: Product ) {
                 </Text>
             </View>
             <View>
-                <Image style={{width: 100, height: 100}} source={{uri: props.ImagePath}} />
+                <Image style={{width: 100, height: 100, borderRadius: 15}} source={{uri: props.ImagePath}} />
             </View>
         </TouchableOpacity>
     );

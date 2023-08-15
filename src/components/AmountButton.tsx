@@ -4,22 +4,23 @@ import Plus from '../assets/images/Plus.svg'
 import { useState } from "react";
 
 
+
 export default function AmountButton(props) {
     let [ amount, setAmount ] = useState(0)
 
     function IncrementAmount(amount: number) {
-        setAmount(amount += 1);
-        props.amount = amount;
+        setAmount(amount + 1);
+        props.onAmountChange(amount + 1);
     }
 
     function DecrementAmount(amount: number) {
-        setAmount(amount -= 1);
-        props.amount = amount;
+        setAmount(amount - 1);
+        props.onAmountChange(amount - 1);
     }
     
 
     return(
-        <View className="w-[135] px-3 py-[8] flex 1 flex-row bg-bgButton justify-between items-center rounded-full	">
+        <View className="w-[135] px-3 py-[6] flex 1 flex-row bg-bgButton justify-between items-center rounded-full	">
             <TouchableOpacity 
                 activeOpacity={0.5}
                 disabled={amount <= 0}

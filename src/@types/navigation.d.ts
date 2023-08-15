@@ -7,7 +7,8 @@ export declare global {
                 calorias: number,
                 valor: number,
                 ImagePath: string,
-                amount: number
+                amount: number,
+                price: number
             }
         }
     }
