@@ -1,9 +1,10 @@
-import { TouchableOpacity } from 'react-native'
+import { TouchableOpacity } from "react-native";
 import BackButtonImg from '../assets/images/BackButtonImg.svg'
 import { useNavigation } from '@react-navigation/native';
 
 
-export default function BackButton() {
+export default function BacKButton() {
+
     const { goBack } = useNavigation();
 
     return(
@@ -13,5 +14,6 @@ export default function BackButton() {
         className='w-[45px] h-[45px] bg-white justify-center items-center rounded-2xl shadow-md'>
             <BackButtonImg />
         </TouchableOpacity>
+
     )
 }
