@@ -8,7 +8,8 @@ module.exports = {
    extend: {
      colors: {
        background: '#E0E0E0',
-       background_Details: '#FFFBFB'
+       background_Details: '#FFFBFB',
+       bgButton: '#FDCC21'
      },
      fontFamily: {
        regular: 'Inter_400Regular',
