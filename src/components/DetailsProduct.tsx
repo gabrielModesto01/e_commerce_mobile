@@ -9,14 +9,13 @@ import { useState } from "react";
 
 
 export default function DetailsProduct(props) {
-    const [productAmount, setProductAmount] = useState(false);
-   
+    const [productAmount, setProductAmount] = useState();
 
     function handleAmountChange(newAmount) {
         productAmount 
         setProductAmount(newAmount);
     }
-    
+        
 
     return(
         <>
@@ -31,7 +30,7 @@ export default function DetailsProduct(props) {
                 <View className="mx-5 mt-5 flex 1 flex-row justify-between items-center">
                     <AmountButton onAmountChange={handleAmountChange}/>
                     <Text className="text-[25px] font-chivo_bold">
-                        R$ 15.00
+                        {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(15)}
                     </Text>
                 </View>
             </LinearGradient>

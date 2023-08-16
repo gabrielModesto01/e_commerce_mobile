@@ -6,7 +6,6 @@ import { useNavigation } from '@react-navigation/native';
 interface Product {
     nome_do_produto: string;
     calorias: number;
-    valor: number;
     ImagePath: string;
     amount: number;
     price: number
@@ -28,7 +27,7 @@ export default function Produto(props: Product ) {
                     </Text>
                 </View>
                 <Text style={{fontSize: 20, fontWeight: 'bold', fontFamily: 'Chivo_700Bold', color: '#FDCC21'}}>
-                    R$ {props.valor}
+                    {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(props.price)}
                 </Text>
             </View>
             <View>
