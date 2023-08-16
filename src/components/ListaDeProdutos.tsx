@@ -2,6 +2,7 @@ import { ScrollView } from "react-native";
 import Produto from "./Produto";
 
 export default function ListaDeProdutos(){
+
     return(
         <ScrollView showsVerticalScrollIndicator={false} style={{marginTop: 15}}>
             <Produto nome_do_produto='Hamburguer' calorias= {150} valor={35} amount={1} price={15} ImagePath='https://i.ibb.co/t8WXw6Z/amirali-mirhashemian-sc5s-TPMr-Vfk-unsplash-2.png'/>
