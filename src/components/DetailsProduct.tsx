@@ -67,7 +67,7 @@ export default function DetailsProduct(props) {
             <View className="flex-row justify-between mx-[15px] mt-[40px]">
                 <TouchableOpacity 
                     activeOpacity={0.5}
-                    className="w-[158px] h-[55px] justify-center items-center border-2 border-[#FDCC21] rounded-[15px] ">
+                    className="w-[158 px] h-[55px] justify-center items-center border-2 border-[#FDCC21] rounded-[15px] ">
                     <Text className="font-bold text-[12px]">
                         Adicionar ao Carrinho
                     </Text>

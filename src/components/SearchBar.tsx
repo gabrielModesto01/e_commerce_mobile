@@ -1,6 +1,6 @@
 import { Image, View, TextInput, TouchableOpacity } from 'react-native';
 import Lupa from '../assets//images/Lupa.svg'
-import IconFilter from '../assets/images/iconFilter2.svg'
+import IconFilter from '../assets/images/iconFilter.svg'
 
 export default function SearchBar() {
     return (
