@@ -3,8 +3,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
-import  Home  from '../screens/Home';
-import  ProductDetails  from '../screens/ProductDetails';
+import Home from '../screens/Home';
+import ProductDetails from '../screens/ProductDetails';
+import Register from '../screens/Register'
 
 export function AppRoutes(){
     return(       
@@ -17,6 +18,11 @@ export function AppRoutes(){
             <Screen 
                 name='productDetails'
                 component={ProductDetails}
+            />
+            
+            <Screen 
+                name='register'
+                component={Register}
             />
         </Navigator>
     

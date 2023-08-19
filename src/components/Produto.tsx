@@ -15,7 +15,9 @@ export default function Produto(props: Product ) {
     const { navigate } = useNavigation();
 
     return(
-        <TouchableOpacity activeOpacity={0.5} onPress={() => navigate('productDetails')} style={{flexDirection: 'row', backgroundColor: '#FFFFFF', borderRadius: 15, justifyContent: "space-between", marginTop: 15 ,padding: 15, shadowColor: '#000',shadowOffset: { width: 0, height: 4,}, shadowOpacity: 0.25, shadowRadius: 4}}>
+        <TouchableOpacity activeOpacity={0.5}
+                          onPress={() => navigate('productDetails')} 
+                          style={{flexDirection: 'row', backgroundColor: '#FFFFFF', borderRadius: 15, justifyContent: "space-between", marginTop: 15 ,padding: 15}}>
             <View style={{justifyContent: "space-between"}}>
                 <Text style={{fontSize: 20, fontWeight:"700", fontFamily:'Inter_700Bold'}}>
                     {props.nome_do_produto}

@@ -10,6 +10,7 @@ export declare global {
                 amount: number,
                 price: number
             }
+            register: undefined
         }
     }
 }

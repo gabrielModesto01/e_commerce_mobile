@@ -1,6 +1,7 @@
-import { View } from "react-native";
+import { View,TouchableOpacity, Text } from "react-native";
 import SearchBar from "../components/SearchBar";
 import ListaDeProdutos from "../components/ListaDeProdutos";
+import ButtonRegisterProduct from "../components/ButtonRegisterProduct";
 
 export default function Home() {
     return(
@@ -8,9 +9,11 @@ export default function Home() {
             <View className="mx-[15px] mt-[30px] mb-[15px] h-full">
                 <SearchBar />
                 <View>
-
+                    <ButtonRegisterProduct />
                 </View>
-                <ListaDeProdutos />
+                <View>
+                    <ListaDeProdutos />
+                </View>
             </View>
         </View>
     )
