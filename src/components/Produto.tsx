@@ -3,15 +3,18 @@ import { Inter_700Bold } from "@expo-google-fonts/inter";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
+
 interface Product {
     nome_do_produto: string;
     calorias: number;
     ImagePath: string;
     amount: number;
-    price: number
+    price: number;
 }
 
+
 export default function Produto(props: Product ) {
+    
     const { navigate } = useNavigation();
 
     return(

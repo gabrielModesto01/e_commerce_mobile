@@ -3,13 +3,16 @@ import BackButton from './BackButton'
 import Like from '../assets/images/Like.svg'
 import SemLike from '../assets/images/SemLike.svg'
 import { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 
-export default function DatailsBar(props) {
+
+export default function DatailsBar() {
+    const{ navigate } = useNavigation(); 
 
     let [ isLike, setIsLike ] = useState(false);
 
-    function dislikeClick() {
+    function dislikeClicked() {
         setIsLike(false);
 
     }
@@ -21,14 +24,14 @@ export default function DatailsBar(props) {
 
     return(
         <View className='flex-row justify-between items-center mt-4'>
-            <BackButton />
+            <BackButton onPress={() => navigate('home')}/>
             <Text className='text-base font-bold '>
                 Descriação do Produto
             </Text>
 
             <TouchableOpacity 
                 className='shadow-md'
-                onPress={isLike ? dislikeClick : likeClicked}>
+                onPress={isLike ? dislikeClicked : likeClicked}>
                 { isLike ? <Like /> : <SemLike /> }
             </TouchableOpacity>
         </View>
