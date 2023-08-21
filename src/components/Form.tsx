@@ -5,9 +5,9 @@ import ButtonRegisterProduct from "./ButtonRegisterProduct";
 
 
 export default function Form() {
-    const [ nomeDoProduto, setNomeDoProduto ] = useState();
-    const [ valorDoProduto, setValorDoProduto ] = useState();
-    const [ descricao, setDescricao ] = useState();
+    const [ nomeDoProduto, setNomeDoProduto ] = useState('');
+    const [ valorDoProduto, setValorDoProduto ] = useState('');
+    const [ descricao, setDescricao ] = useState('');
 
     function pressButtonRegister() {
         Keyboard.dismiss();
@@ -21,21 +21,27 @@ export default function Form() {
                 Nome do Produto
             </Text>
             <Input 
-                placeholder="nome do produto..." 
+                placeholder="nome do produto..."
+                onChangeText={setNomeDoProduto}
             />
 
             <Text className="ml-[10px] font-bold text-[15px] mt-[15px]">
                 Valor do Produto
             </Text>
-            <Input />
+            <Input
+                placeholder="valor do produto..." 
+                onChangeText={setValorDoProduto}    
+            />
 
             <Text className="ml-[10px] font-bold text-[15px] mt-[15px]">
                 Descrição do Produto
             </Text>
                 <View className="bg-[#CECDCD] rounded-[15px]">
                     <TextInput
-                        multiline
                         className="h-[90px] px-4"
+                        multiline
+                        placeholder="descrição do produto..."
+                        onChangeText={setDescricao} 
                     />
                 </View>
            <ButtonRegisterProduct onPress={pressButtonRegister}/>
