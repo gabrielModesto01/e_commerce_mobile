@@ -21,7 +21,7 @@ export default function Form() {
                 Nome do Produto
             </Text>
             <Input 
-                placeholder="nome do produto..."
+                placeholder="nome do produto...."
                 onChangeText={setNomeDoProduto}
             />
 
